@@ -1,15 +1,7 @@
-import React, { Component } from 'react';
-import { View, Text, TouchableOpacity} from 'react-native';
+import React, {Component, PropTypes} from 'react'
+import {View, Text, TouchableOpacity} from 'react-native'
 
 export default class MyScene extends Component {
-  constructor(props) {
-    super(props)
-  }
-
-  static defaultProps = {
-    title: 'MyScene'
-  };
-
   redirect = () => {
     this.props.navigator.pop()
   }
@@ -17,12 +9,16 @@ export default class MyScene extends Component {
   render() {
     return (
       <View>
-      <TouchableOpacity onPress={this.redirect}>
-        <Text>
-          点我回退
-        </Text>
-      </TouchableOpacity>
+        <TouchableOpacity onPress={this.redirect}>
+          <Text>
+            点我回退
+          </Text>
+        </TouchableOpacity>
       </View>
     )
   }
+}
+
+MyScene.propTypes = {
+  navigator: PropTypes.object
 }

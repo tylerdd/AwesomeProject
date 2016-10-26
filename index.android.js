@@ -4,7 +4,7 @@
  * @flow
  */
 
-import {AppRegistry} from 'react-native';
+import {AppRegistry} from 'react-native'
 import Setup from './js/view/Setup'
 
-AppRegistry.registerComponent('AwesomeProject', () => Setup);
+AppRegistry.registerComponent('AwesomeProject', () => Setup)

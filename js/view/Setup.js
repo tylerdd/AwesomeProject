@@ -1,33 +1,30 @@
 import {
-  AppRegistry,
-  StyleSheet,
-  Text,
-  View,
-  TouchableOpacity,
   Navigator
-} from 'react-native';
-import React, { Component } from 'react';
+} from 'react-native'
+import React from 'react'
 import Welcome from './Welcome'
 
-const defaultRoute = {
+let defaultRoute = {
   title: 'Welcome',
   component: Welcome
 }
 
-export default class Setup extends Component {
-  renderScene(route, navigator) {
-    let Component = route.component;
-    return (
-      <Component {...route.params} navigator={navigator} />
-    );
-  }
+let renderScene = (route, navigator) => {
+  // This component name must be upper case, even it is a dynamic component
+  let DynamicComponent = route.component
+  return (
+    <DynamicComponent {...route.params} navigator={navigator} />
+  )
+}
 
-  render() {
-    return (
-      <Navigator
-        initialRoute={defaultRoute}
-        renderScene={this.renderScene}
-      />
-    )
-  }
+/**
+ * Using a pure function is alright!
+ */
+export default function Setup() {
+  return (
+    <Navigator
+      initialRoute={defaultRoute}
+      renderScene={renderScene}
+    />
+  )
 }

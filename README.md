@@ -20,9 +20,16 @@ react-native init AwesomeProject
 
 - [gradle-wrapper.properties](https://github.com/simongfxu/AwesomeProject/blob/master/android/gradle/wrapper/gradle-wrapper.properties)
 - [gradle.properties](https://github.com/simongfxu/AwesomeProject/blob/master/android/gradle.properties)
+- ESLint
+- Yarn
 
 `gradle-wrapper.properties`配置早先会从网络上拉去zip包（60多M），现在直接从本地读取。
+
 `gradle.properties`加入一个socks代理（使用了ShadowSocks）
+
+`ESLint`用于规范化JavaScript编写，可以避免一些常见的错误。
+
+`Yarn`用于替代npm龟速的安装进度
 
 ## React Native版本
 

@@ -1,5 +1,5 @@
-import React, { Component } from 'react';
-import { View, Text, TouchableOpacity, StyleSheet } from 'react-native';
+import React, {Component, PropTypes} from 'react'
+import {View, Text, TouchableOpacity, StyleSheet} from 'react-native'
 import MyScene from './MyScene'
 
 const styles = StyleSheet.create({
@@ -19,17 +19,9 @@ const styles = StyleSheet.create({
     color: '#333333',
     marginBottom: 5,
   },
-});
+})
 
 export default class Welcome extends Component {
-  constructor(props) {
-    super(props)
-  }
-
-  static defaultProps = {
-    title: 'Weclcome'
-  };
-
   redirect = () => {
     this.props.navigator.push({
       title: 'MyScene',
@@ -49,12 +41,15 @@ export default class Welcome extends Component {
         </Text>
 
         <TouchableOpacity onPress={this.redirect}>
-          <Text  style={styles.instructions}>
+          <Text style={styles.instructions}>
             点我跳转
           </Text>
         </TouchableOpacity>
-
       </View>
     )
   }
+}
+
+Welcome.propTypes = {
+  navigator: PropTypes.object
 }
