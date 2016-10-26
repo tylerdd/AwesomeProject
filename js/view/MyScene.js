@@ -1,5 +1,5 @@
 import React, {Component, PropTypes} from 'react'
-import {View, Text, TouchableOpacity} from 'react-native'
+import Player from './Player'
 
 export default class MyScene extends Component {
   redirect = () => {
@@ -8,13 +8,7 @@ export default class MyScene extends Component {
 
   render() {
     return (
-      <View>
-        <TouchableOpacity onPress={this.redirect}>
-          <Text>
-            点我回退
-          </Text>
-        </TouchableOpacity>
-      </View>
+      <Player />
     )
   }
 }
