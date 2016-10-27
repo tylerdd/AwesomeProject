@@ -1,7 +1,7 @@
 import React, {Component, PropTypes} from 'react'
 import Player from './Player'
 
-export default class MyScene extends Component {
+export default class Video extends Component {
   redirect = () => {
     this.props.navigator.pop()
   }
@@ -13,6 +13,6 @@ export default class MyScene extends Component {
   }
 }
 
-MyScene.propTypes = {
+Video.propTypes = {
   navigator: PropTypes.object
 }

@@ -1,6 +1,7 @@
 import React, {Component, PropTypes} from 'react'
-import {View, Text, TouchableOpacity, StyleSheet} from 'react-native'
-import MyScene from './MyScene'
+import {View, Text, TouchableOpacity, StyleSheet, ScrollView} from 'react-native'
+import Video from './Video'
+import TabView from './TabView'
 
 const styles = StyleSheet.create({
   container: {
@@ -15,17 +16,31 @@ const styles = StyleSheet.create({
     margin: 10,
   },
   instructions: {
-    textAlign: 'center',
+    textAlign: 'left',
     color: '#333333',
     marginBottom: 5,
+    flex: 1,
+    fontSize: 24
   },
+  scrollView: {
+    flex: 1,
+    alignItems: 'flex-start',
+    marginTop: 20
+  }
 })
 
 export default class Welcome extends Component {
-  redirect = () => {
+  redirectVideo = () => {
     this.props.navigator.push({
-      title: 'MyScene',
-      component: MyScene
+      title: 'video',
+      component: Video
+    })
+  }
+
+  redirectTabView = () => {
+    this.props.navigator.push({
+      title: 'tabView',
+      component: TabView
     })
   }
 
@@ -33,18 +48,28 @@ export default class Welcome extends Component {
     return (
       <View style={styles.container}>
         <Text style={styles.welcome}>
-          欢迎来到React Native的世界！
+          欢迎来到React Native
         </Text>
-        <Text style={styles.instructions}>
-          Double tap R on your keyboard to reload,{'\n'}
-          Shake or press menu button for dev menu
+        <Text>
+          摇一摇来感受体验神奇！
         </Text>
 
-        <TouchableOpacity onPress={this.redirect}>
-          <Text style={styles.instructions}>
-            点我跳转
-          </Text>
-        </TouchableOpacity>
+        <View style={styles.scrollView}>
+          <ScrollView>
+            <TouchableOpacity onPress={this.redirectVideo}>
+              <Text style={styles.instructions}>
+                播放视频
+              </Text>
+            </TouchableOpacity>
+
+            <TouchableOpacity onPress={this.redirectTabView}>
+              <Text style={styles.instructions}>
+                Tab视图切换
+              </Text>
+            </TouchableOpacity>
+          </ScrollView>
+        </View>
+
       </View>
     )
   }
