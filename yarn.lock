@@ -4254,6 +4254,10 @@ react-deep-force-update@^1.0.0:
   version "1.0.1"
   resolved "http://registry.npm.taobao.org/react-deep-force-update/download/react-deep-force-update-1.0.1.tgz#f911b5be1d2a6fe387507dd6e9a767aa2924b4c7"
 
+react-native-swiper:
+  version "1.5.2"
+  resolved "http://registry.npm.taobao.org/react-native-swiper/download/react-native-swiper-1.5.2.tgz#263f9caf2c0472a1bb7b83dbbcd37b46aa3762d4"
+
 react-native-tab-view:
   version "0.0.37"
   resolved "http://registry.npm.taobao.org/react-native-tab-view/download/react-native-tab-view-0.0.37.tgz#fab1cad05420a3eb52b27b7984a3d9f9b2d4e924"

@@ -2,6 +2,7 @@ import React, {Component, PropTypes} from 'react'
 import {View, Text, TouchableOpacity, StyleSheet, ScrollView} from 'react-native'
 import Video from './Video'
 import TabView from './TabView'
+import SwipeView from './SwipeView'
 
 const styles = StyleSheet.create({
   container: {
@@ -44,6 +45,13 @@ export default class Welcome extends Component {
     })
   }
 
+  redirectSwipeView = () => {
+    this.props.navigator.push({
+      title: 'swipeView',
+      component: SwipeView
+    })
+  }
+
   render() {
     return (
       <View style={styles.container}>
@@ -65,6 +73,12 @@ export default class Welcome extends Component {
             <TouchableOpacity onPress={this.redirectTabView}>
               <Text style={styles.instructions}>
                 Tab视图切换
+              </Text>
+            </TouchableOpacity>
+
+            <TouchableOpacity onPress={this.redirectSwipeView}>
+              <Text style={styles.instructions}>
+                SwipeView
               </Text>
             </TouchableOpacity>
           </ScrollView>
