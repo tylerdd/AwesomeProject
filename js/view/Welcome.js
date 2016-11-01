@@ -3,6 +3,7 @@ import {View, Text, TouchableOpacity, StyleSheet, ScrollView} from 'react-native
 import Video from './Video'
 import TabView from './TabView'
 import SwipeView from './SwipeView'
+import Navbar from './Navbar'
 
 const styles = StyleSheet.create({
   container: {
@@ -52,6 +53,13 @@ export default class Welcome extends Component {
     })
   }
 
+  redirectNavbarView = () => {
+    this.props.navigator.push({
+      title: 'navbar',
+      component: Navbar
+    })
+  }
+
   render() {
     return (
       <View style={styles.container}>
@@ -79,6 +87,12 @@ export default class Welcome extends Component {
             <TouchableOpacity onPress={this.redirectSwipeView}>
               <Text style={styles.instructions}>
                 SwipeView
+              </Text>
+            </TouchableOpacity>
+
+            <TouchableOpacity onPress={this.redirectNavbarView}>
+              <Text style={styles.instructions}>
+                Navbar
               </Text>
             </TouchableOpacity>
           </ScrollView>

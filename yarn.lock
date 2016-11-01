@@ -4254,6 +4254,10 @@ react-deep-force-update@^1.0.0:
   version "1.0.1"
   resolved "http://registry.npm.taobao.org/react-deep-force-update/download/react-deep-force-update-1.0.1.tgz#f911b5be1d2a6fe387507dd6e9a767aa2924b4c7"
 
+react-native-navbar:
+  version "1.5.4"
+  resolved "https://registry.yarnpkg.com/react-native-navbar/-/react-native-navbar-1.5.4.tgz#9e8b1cfb6a02eee89abdf631f7ac3af3174a61b1"
+
 react-native-swiper:
   version "1.5.2"
   resolved "http://registry.npm.taobao.org/react-native-swiper/download/react-native-swiper-1.5.2.tgz#263f9caf2c0472a1bb7b83dbbcd37b46aa3762d4"
